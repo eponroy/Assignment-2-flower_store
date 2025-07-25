@@ -13,7 +13,6 @@ body {
 
 /* Shared style  */
 .text-p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.5);
@@ -168,8 +167,63 @@ body {
     border-radius: 6px;
     cursor: pointer;
 }
+/* Plant Lover Section */
+.plant-lover {
+    background-color: white;
+    padding: 60px 20px;
+    margin-top: 100px;
+}
 
-/* Responsive */
+.plant-lover .container {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+/* Left image */
+.lover-image {
+    flex: 1;
+    position: relative;
+    width: fit-content;
+}
+
+.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 286px;
+    z-index: 10;
+}
+
+/* Right content */
+.lover-content {
+    flex: 1;
+    position: relative;
+    padding-top: auto;
+}
+
+.lover-content h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.lover-content .text-p {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive  mobile */
 @media (max-width: 576px) {
     .nav-links {
         display: none;
@@ -182,7 +236,9 @@ body {
         flex-direction: column-reverse;
     }
     .banner-text,
-    .banner-text h1 {
+    .banner-text h1,
+    .lover-content h2,
+    .lover-content .text-p {
         text-align: left;
         padding-top: 0;
         width: 360px;
@@ -194,5 +250,23 @@ body {
     }
     .plants-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .plant-lover {
+        margin-top: 20px;
+    }
+
+    .plant-lover .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .badge {
+        display: none;
+    }
+    .lover-content {
+        text-align: left;
+    }
+    .lover-content {
+        position: static;
+        margin-bottom: 80px;
     }
 }
