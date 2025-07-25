@@ -306,6 +306,64 @@ body {
     text-align: center;
 }
 
+/* Join Section */
+.join-section {
+    background-color: rgba(7, 51, 79, 0.4);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.join-content {
+    width: 800px;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-section h2 {
+    padding-left: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.join-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.join-form input[type="email"] {
+    padding: 20px 0px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 200px;
+    gap: 10px;
+}
+
+.join-form button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #e95a08;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.join-form button:hover {
+    background-color: grey;
+}
+
 /* Responsive  mobile */
 @media (max-width: 576px) {
     .nav-links {
@@ -347,6 +405,7 @@ body {
     }
     .lover-content {
         text-align: left;
+        padding: 0 0;
     }
     .lover-content {
         max-width: 361px;
@@ -355,6 +414,7 @@ body {
     .deal-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        padding: 0 0;
     }
     .deal-grid .deal-card.large {
         grid-column: 1 / 2;
@@ -365,5 +425,29 @@ body {
         max-width: 361px;
         margin: 0 auto;
         text-align: center;
+    }
+    .join-section h2 {
+        font-size: 28px;
+    }
+
+    .join-form {
+        flex-direction: column;
+    }
+    .join-form input,
+    .join-form button {
+        width: 100%;
+    }
+    .join-section {
+        width: 390px;
+    }
+    .join-section h2 {
+        padding-left: 0%;
+        text-align: center;
+        width: 280px;
+        font-size: 16px;
+    }
+    .join-content {
+        width: 280px;
+        gap: 10px;
     }
 }
