@@ -12,7 +12,13 @@ body {
 }
 
 /* Shared style  */
-
+.text p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 570px;
+}
 /* Navbar Styles */
 .navbar {
     padding: 20px 0;
@@ -70,6 +76,43 @@ body {
     font-size: 20px;
 }
 
+/* Banner Section */
+
+.banner .container {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banner-text {
+    flex: 1;
+    padding-top: 162px;
+}
+
+.banner-text h1 {
+    font-size: 65px;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.banner-text .highlight {
+    color: #e95a08;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+    padding-top: 100px;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Responsive */
 @media (max-width: 576px) {
     .nav-links {
@@ -78,5 +121,20 @@ body {
     .logo img {
         width: 63px;
         height: 38px;
+    }
+    .banner .container {
+        flex-direction: column-reverse;
+    }
+    .banner-text,
+    .banner-text h1 {
+        text-align: left;
+        padding-top: 0;
+        width: 360px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .banner-image {
+        text-align: center;
     }
 }
